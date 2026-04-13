@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+* {
+  font-family: var(--font-inter-display);
+  line-height: 140%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-primary: #EF5237;
+  --color-primary-hover: #d9472f;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg;
+
   }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-hover;
+    box-shadow: 0px -2px 0px 0px #E93111 inset;
+
+  }
+
+
+
+  .icon-box {
+    @apply bg-[#EF52370F] shadow-[inset_0px_-2px_0px_0px_#E931111A] flex items-center justify-center w-10 h-10 rounded-lg;
+
+    flex-shrink: 0;
+  }
+
+  .shadow-soft {
+    box-shadow: 0px 0px 2px 0px #00000029;
+    box-shadow: 0px 4px 6px 0px #0000000F;
+  }
+
+  .container {
+    @apply px-4 mx-auto;
+
+    max-width: 1300px !important;
+  }
+
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+button {
+  cursor: pointer;
+  outline: none;
 }
