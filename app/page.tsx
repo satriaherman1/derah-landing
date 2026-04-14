@@ -1,29 +1,51 @@
-import { Basket, ChartLineUp, Crosshair, Desktop, Devices, Lightning, MopedFront, Scales, SquaresFour, Steps, StoreFront } from "@/components/icons";
+import Accordion from "@/components/accordion";
+import { Basket, ChartLineUp, Crosshair, Desktop, Devices, Lightning, MopedFront, Question, Scales, SquaresFour, Steps, StoreFront } from "@/components/icons";
 import Navbar from "@/components/navbar";
 import Switcher from "@/components/switcher";
 import Image from "next/image";
+import CTA from "@/components/cta";
+import Footer from "@/components/footer";
+import EmailCapture from "@/components/email-capture";
+import Badge from "@/components/badge";
 
 export default function Home() {
+
+
+  const faqData = [
+    {
+      title: "Do I have to use a specific payment gateway?",
+      content:
+        "No. We operate on a Bring Your Own (BYO) payment provider model for online orders.",
+    },
+    {
+      title: "How does the menu sync actually work?",
+      content: "Menu akan sync otomatis via API atau dashboard.",
+    },
+    {
+      title: "Does Derah support multiple restaurant locations?",
+      content: "Yes, multiple locations are supported.",
+    },
+    {
+      title: "How are online deliveries handled?",
+      content: "Delivery di-handle via integrasi third-party.",
+    },
+  ];
   return (
     <>
       <Navbar />
       <main className="mt-16">
         <div className="flex flex-wrap flex-col-reverse md:flex-row justify-between gap-x-4 container max-w-[1300px]">
           <section className="basis-full md:basis-[calc(40%-15px)]">
-            <div className="px-3 py-1 bg-[#0000000A] rounded-full font-medium text-sm flex gap-x-2 w-fit">
+            <Badge>
               <StoreFront /> All-In-One POS Software
-            </div>
+            </Badge>
 
             <h1 className="text-4xl font-bold">Run Your Entire Restaurant <br />
               From Any Device.
             </h1>
             <p className="text-black/60 mt-5">Manage in-store, online, and delivery apps (Talabat, Deliveroo, Keeta) from one web-based POS. No expensive hardware required.</p>
 
-            <section className="flex p-1 rounded-lg border border-[#0000001A] bg-white w-fit shadow-soft mt-8">
-              <input type="text" className="bg-transparent px-3 py-2 outline-0" placeholder="Enter your work Email" />
-
-              <button className="btn btn-primary whitespace-nowrap">Get Started</button>
-            </section>
+            <EmailCapture />
 
 
             <div className="mt-20">
@@ -57,9 +79,9 @@ export default function Home() {
         {/* platform features */}
         <div className="container max-w-[1300px] mt-20">
           <section className="flex flex-col items-center">
-            <div className="px-3 py-1 bg-[#0000000A] rounded-full  text-sm flex gap-x-2 w-fit">
+            <Badge>
               <Desktop /> Platform Features
-            </div>
+            </Badge>
 
             <h2 className="mt-4 text-[32px] font-semibold">
               One platform for your restaurant.
@@ -100,9 +122,9 @@ export default function Home() {
 
         <div className=" mt-20 bg-black py-12">
           <section className="container max-w-[1300px]">
-            <div className="px-3 py-1 bg-[#FFFFFF1A] rounded-full  text-sm flex gap-x-2 w-fit text-white">
+            <Badge className="bg-[#FFFFFF1A] text-white">
               <Crosshair /> Built For Your Workflow
-            </div>
+            </Badge>
 
             <h2 className="mt-4 text-[32px] font-medium text-white">
               A POS designed for how you operate.
@@ -133,9 +155,9 @@ export default function Home() {
 
 
             <section className="mt-28">
-              <div className="px-3 py-1 bg-[#FFFFFF1A] rounded-full  text-sm flex items-center gap-x-2 w-fit text-white">
+              <Badge className="bg-[#FFFFFF1A] text-white">
                 <Lightning /> Key Advantages
-              </div>
+              </Badge>
 
               <div className="flex flex-wrap justify-between">
                 <section className="basis-full md:basis-[calc(50%-20px)]">
@@ -195,11 +217,11 @@ export default function Home() {
 
 
         <div className="mt-20">
-          <section className="container max-w-[1300px]">
+          <section className="container max-w-[1300px] border-b border-[#66666630] pb-9">
             <div className="bg-[#0000000A] p-10 rounded-2xl">
-              <div className="px-3 py-1 bg-white rounded-full  text-sm flex gap-x-2 w-fit">
+              <Badge className="bg-white">
                 <Steps /> Platform Features
-              </div>
+              </Badge>
 
               <h2 className="mt-4 text-[32px] font-semibold">
                 Set up once. Sell everywhere.
@@ -239,8 +261,29 @@ export default function Home() {
 
 
           </section>
+
+
+          <section className="container mt-12">
+            <div className="flex flex-col items-center ">
+              <div className="text-center">
+                <Badge className="mx-auto">
+                  <Question /> Frequently Asked Questions
+                </Badge>
+
+                <h2 className="mt-4 text-[32px] font-semibold">
+                  Everything you need to know.
+                </h2>
+
+                <Accordion className="mt-10" items={faqData} />
+              </div>
+
+            </div>
+          </section>
         </div>
+
+        <CTA />
       </main>
+      <Footer />
     </>
   );
 }

@@ -12,14 +12,24 @@ import Lightning from './lightning'
 import Scales from './scales'
 import ChartLineUp from './chart-line-up'
 import Steps from './steps'
+import Question from './question'
+import ShoppingBagOpen from './shopping-bag-open'
+import Cloud from './cloud'
+import Package from './package'
+import CreditCard from './credit-card'
 
 export {
     CaretDown,
     Basket,
+    Cloud,
+    CreditCard,
+    Package,
     ChartLineUp,
     ArrowClockwise,
+    Question,
     Steps,
     Devices,
+    ShoppingBagOpen,
     RockerLaunch,
     StoreFront,
     Desktop,
