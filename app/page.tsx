@@ -117,6 +117,10 @@ export default function Home() {
             defaultValue="pos"
           // onChange={(val) => console.log(val)}
           />
+
+          <div className="rounded-lg overflow-hidden">
+            <iframe className="container h-[600px] rounded-lg overflow-hidden mt-12" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+          </div>
         </div>
         {/* end platform features */}
 

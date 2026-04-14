@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Facebook, Instagram, Linkedin, TwitterX } from './icons';
 
 export default function Footer() {
     return (
@@ -17,8 +18,12 @@ export default function Footer() {
                         <p className="text-[#666666] text-sm leading-relaxed max-w-xs">
                             The all-in-one web-based POS and omnichannel platform built strictly for modern F&B businesses.
                         </p>
-                        <div className="flex items-center gap-x-4 mt-8 h-6">
+                        <div className="flex items-center gap-x-4 mt-4 h-6">
                             {/* Media icons requested to be blank */}
+                            <Link href="#"><Facebook /></Link>
+                            <Link href="#"><Instagram /></Link>
+                            <Link href="#"><Linkedin /></Link>
+                            <Link href="#"><TwitterX /></Link>
                         </div>
                     </div>
 
@@ -26,32 +31,32 @@ export default function Footer() {
                         <div>
                             <h4 className="font-semibold text-black mb-5 text-[15px]">Quick Links</h4>
                             <ul className="space-y-4">
-                                <li><Link href="#" className="text-sm text-[#888888] hover:text-black transition-colors font-light">Integrations</Link></li>
-                                <li><Link href="#" className="text-sm text-[#888888] hover:text-black transition-colors font-light">Pricing</Link></li>
+                                <li><Link href="#" className="text-sm text-[#666666] hover:text-black transition-colors">Integrations</Link></li>
+                                <li><Link href="#" className="text-sm text-[#666666] hover:text-black transition-colors">Pricing</Link></li>
                             </ul>
                         </div>
 
                         <div>
                             <h4 className="font-semibold text-black mb-5 text-[15px]">Company</h4>
                             <ul className="space-y-4">
-                                <li><Link href="#" className="text-sm text-[#888888] hover:text-black transition-colors font-light">About us</Link></li>
-                                <li><Link href="#" className="text-sm text-[#888888] hover:text-black transition-colors font-light">Careers</Link></li>
-                                <li><Link href="#" className="text-sm text-[#888888] hover:text-black transition-colors font-light">Contact Sales</Link></li>
-                                <li><Link href="#" className="text-sm text-[#888888] hover:text-black transition-colors font-light">Partners</Link></li>
+                                <li><Link href="#" className="text-sm text-[#666666] hover:text-black transition-colors">About us</Link></li>
+                                <li><Link href="#" className="text-sm text-[#666666] hover:text-black transition-colors">Careers</Link></li>
+                                <li><Link href="#" className="text-sm text-[#666666] hover:text-black transition-colors">Contact Sales</Link></li>
+                                <li><Link href="#" className="text-sm text-[#666666] hover:text-black transition-colors">Partners</Link></li>
                             </ul>
                         </div>
 
                         <div>
                             <h4 className="font-semibold text-black mb-5 text-[15px]">Contact & Support</h4>
                             <ul className="space-y-4">
-                                <li><Link href="#" className="text-sm text-[#888888] hover:text-black transition-colors font-light">Help Center</Link></li>
-                                <li><Link href="#" className="text-sm text-[#888888] hover:text-black transition-colors font-light">API Documentation</Link></li>
+                                <li><Link href="#" className="text-sm text-[#666666] hover:text-black transition-colors">Help Center</Link></li>
+                                <li><Link href="#" className="text-sm text-[#666666] hover:text-black transition-colors">API Documentation</Link></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between items-center text-[13px] text-[#888888] pt-6 border-transparent">
+                <div className="flex flex-col md:flex-row justify-between items-center text-[13px] text-[#666666] pt-6 border-transparent">
                     <p>© 2026 Derah. All rights reserved.</p>
                     <div className="flex gap-x-8 mt-4 md:mt-0">
                         <Link href="#" className="hover:text-black transition-colors">Privacy Policy</Link>

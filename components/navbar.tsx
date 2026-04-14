@@ -11,6 +11,61 @@ import {
 } from "./icons";
 import Link from "next/link";
 
+type NavItem = {
+    icon: React.ReactNode;
+    title: string;
+    desc: string;
+    href: string;
+};
+
+function NavDropdown({ label, items, open, className }: { label: string; items: NavItem[]; open: boolean, className?: string }) {
+    return (
+        <div
+            className={`
+                fixed left-1/2 -translate-x-1/2 top-[65px]
+                w-fit max-w-[1100px]
+                z-[60]
+                transition-all duration-200
+                ${open ? "opacity-100 translate-y-0 visible" : "opacity-0 translate-y-2 invisible"}
+                ${className}
+            `}
+        >
+            <div className="bg-white rounded-2xl shadow-xl p-6">
+                <p className="text-sm text-[#666666] mb-4 font-medium">{label}</p>
+
+                <div className={`flex  gap-3`}>
+                    {items.map((item, i) => (
+                        <Link
+                            href={item.href}
+                            key={i}
+                            className="flex-1 hover:bg-gray-50 p-3 rounded-lg flex gap-x-3 cursor-pointer transition"
+                        >
+                            <div className="shrink-0 icon-box">
+                                {item.icon}
+                            </div>
+                            <div className="min-w-0">
+                                <h4 className="font-semibold">{item.title}</h4>
+                                <p className="text-sm text-[#666666] mt-2">{item.desc}</p>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+
+                {/* BANNER */}
+                <div className="mt-6 flex justify-between items-center bg-gray-50 p-4 rounded-xl">
+                    <div className="flex gap-x-2 items-center">
+                        <div className="rounded-lg bg-primary p-1.5">
+                            <RockerLaunch />
+                        </div>
+                        <span className=" font-semibold">Want to see Derah in action?</span> <span className="text-[#666666]">Get a personalized walkthrough of our unified POS.</span>
+                    </div>
+                    <button className="btn btn-primary">See a Demo</button>
+                </div>
+            </div>
+        </div>
+    );
+}
+
 const productItems = [
     {
         icon: <Devices />,
@@ -32,10 +87,31 @@ const productItems = [
     },
 ];
 
+
+const solutionsItems = [
+    {
+        icon: <Devices />,
+        title: "For Restaurants",
+        desc: "Tailored features for full-service dining.",
+        href: "/solutions/for-restaurant",
+    },
+    {
+        icon: <Basket />,
+        title: "For Coffee Shops",
+        desc: "Optimized flows for quick-service and cafe operations.",
+        href: "/solutions/for-coffee-shop",
+    },
+
+];
+
 export default function Navbar() {
-    const [open, setOpen] = useState(false);
+    const [openProduct, setOpenProduct] = useState(false);
+    const [openSolutions, setOpenSolutions] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
     const [mobileProduct, setMobileProduct] = useState(false);
+    const [mobileSolutions, setMobileSolutions] = useState(false);
+
+    const anyOpen = openProduct || openSolutions;
 
     return (
         <>
@@ -44,7 +120,7 @@ export default function Navbar() {
                 className={`
                     fixed inset-0 bg-black/40 backdrop-blur-sm
                     transition-opacity duration-300 z-30 hidden md:block pointer-events-none
-                    ${open ? "opacity-100 visible" : "opacity-0 invisible"}
+                    ${anyOpen ? "opacity-100 visible" : "opacity-0 invisible"}
                 `}
             />
 
@@ -67,73 +143,27 @@ export default function Navbar() {
 
                         {/* PRODUCT */}
                         <div
-                            onMouseEnter={() => setOpen(true)}
-                            onMouseLeave={() => setOpen(false)}
+                            onMouseEnter={() => setOpenProduct(true)}
+                            onMouseLeave={() => setOpenProduct(false)}
                             className="relative"
                         >
                             <button className="flex items-center gap-x-2 font-medium">
                                 Product <CaretDown />
                             </button>
-
-                            {/* DROPDOWN */}
-                            <div
-                                className={`
-                                    fixed left-1/2 -translate-x-1/2 top-[80px]
-                                    w-[90vw] max-w-[1100px]
-                                    z-[60]
-                                    transition-all duration-200
-                                    ${open
-                                        ? "opacity-100 translate-y-0 visible"
-                                        : "opacity-0 translate-y-2 invisible"}
-                                `}
-                            >
-                                <div className="bg-white rounded-2xl shadow-xl p-6">
-
-                                    <p className="text-sm text-[#666666] mb-4 font-medium">
-                                        Product
-                                    </p>
-
-                                    <div className="grid grid-cols-3 gap-6">
-                                        {productItems.map((item, i) => (
-                                            <Link
-                                                href={item.href}
-                                                key={i}
-                                                className="hover:bg-gray-50 p-3 rounded-lg flex gap-x-3 cursor-pointer transition"
-                                            >
-                                                <div className="shrink-0 icon-box">
-                                                    {item.icon}
-                                                </div>
-                                                <div className="min-w-0">
-                                                    <h4 className="font-semibold">
-                                                        {item.title}
-                                                    </h4>
-                                                    <p className="text-sm text-[#666666] mt-2">
-                                                        {item.desc}
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                        ))}
-                                    </div>
-
-                                    {/* BANNER */}
-                                    <div className="mt-6 flex justify-between items-center bg-gray-50 p-4 rounded-xl">
-                                        <div className="flex gap-x-2 items-center">
-                                            <div className="rounded-lg bg-primary p-1.5">
-                                                <RockerLaunch />
-                                            </div>
-                                            <span className="text-sm">
-                                                Want to see Derah in action?
-                                            </span>
-                                        </div>
-                                        <button className="btn btn-primary">
-                                            See a Demo
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                            <NavDropdown className="min-w-6xl" label="Product" items={productItems} open={openProduct} />
                         </div>
 
-                        <button>Solutions</button>
+                        {/* SOLUTIONS */}
+                        <div
+                            onMouseEnter={() => setOpenSolutions(true)}
+                            onMouseLeave={() => setOpenSolutions(false)}
+                            className="relative"
+                        >
+                            <button className="flex items-center gap-x-2 font-medium">
+                                Solutions <CaretDown />
+                            </button>
+                            <NavDropdown className="min-w-4xl" label="Solutions" items={solutionsItems} open={openSolutions} />
+                        </div>
                         <button>Integrations</button>
                         <button>Pricing</button>
                     </section>
@@ -239,9 +269,44 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    <button className="text-left text-lg font-medium">
-                        Solutions
-                    </button>
+                    {/* SOLUTIONS */}
+                    <div>
+                        <button
+                            onClick={() => setMobileSolutions(!mobileSolutions)}
+                            className="flex justify-between items-center w-full text-left font-medium text-lg"
+                        >
+                            Solutions
+                            <CaretDown
+                                className={`transition-transform ${mobileSolutions ? "rotate-180" : ""}`}
+                            />
+                        </button>
+
+                        <div
+                            className={`
+                                overflow-hidden transition-all duration-300
+                                ${mobileSolutions ? "max-h-[500px] mt-4" : "max-h-0"}
+                            `}
+                        >
+                            <div className="flex flex-col gap-y-3">
+                                {solutionsItems.map((item, i) => (
+                                    <Link
+                                        href={item.href}
+                                        key={i}
+                                        className="flex gap-x-3 p-3 rounded-xl hover:bg-gray-50 transition"
+                                    >
+                                        <div className="shrink-0 icon-box">
+                                            {item.icon}
+                                        </div>
+                                        <div className="min-w-0">
+                                            <p className="font-semibold text-sm">{item.title}</p>
+                                            <p className="text-xs text-[#666666]">{item.desc}</p>
+                                        </div>
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
                     <button className="text-left text-lg font-medium">
                         Integrations
                     </button>

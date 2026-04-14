@@ -7,12 +7,12 @@ interface EmailCaptureProps {
 }
 
 export default function EmailCapture({
-    className = "border-[#0000001A]",
+    className = "",
     inputClassName = "",
     buttonClassName = "",
 }: EmailCaptureProps) {
     return (
-        <section className={`flex p-1 rounded-lg border bg-white w-full max-w-full md:w-fit shadow-soft mt-8 ${className}`}>
+        <section className={`flex p-1 rounded-lg border border-[#0000001A] bg-white w-full max-w-full md:w-fit shadow-soft mt-8 ${className}`}>
             <input
                 type="text"
                 className={`bg-transparent px-3 py-2 outline-0 text-black w-full min-w-0 md:min-w-[260px] flex-1 text-sm ${inputClassName}`}
