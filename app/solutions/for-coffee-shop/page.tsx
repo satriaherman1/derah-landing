@@ -11,7 +11,7 @@ export default function ForCoffeeShop() {
 
         <Navbar />
         <main className="mt-6 md:mt-16">
-            <div className="text-center ">
+            <div className="text-center container max-w-[1300px]">
                 <div className="flex flex-col gap-y-4 mx-auto">
                     <Badge className="mx-auto">
                         <ShoppingBagOpen /> Coffe Shops & Cafes
