@@ -34,7 +34,7 @@ export default function Accordion({ items, className }: AccordionProps) {
                             onClick={() => toggle(index)}
                             className="flex w-full items-center justify-between px-4 py-4 text-left"
                         >
-                            <span className="text-sm font-medium text-gray-800">
+                            <span className=" font-semibold text-gray-800">
                                 {item.title}
                             </span>
 

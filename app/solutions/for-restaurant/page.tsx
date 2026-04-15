@@ -4,14 +4,14 @@ import EmailCapture from "@/components/email-capture";
 import Footer from "@/components/footer";
 import { CellTower, Robot, ShoppingBagOpen, StoreFront } from "@/components/icons";
 import Navbar from "@/components/navbar";
-import Image from "next/image";
+import ImageWithSkeleton from "@/components/image-with-skeleton";
 
 export default function ForRestaurant() {
     return (<>
 
         <Navbar />
         <main className="mt-6 md:mt-16">
-            <div className="text-center ">
+            <div className="text-center container max-w-[1300px]">
                 <div className="flex flex-col gap-y-4 mx-auto">
                     <Badge className="mx-auto">
                         <ShoppingBagOpen /> For Restaurant
@@ -22,8 +22,8 @@ export default function ForRestaurant() {
 
                     <EmailCapture className="mx-auto" />
 
-                    <div className="rounded-lg overflow-hidden">
-                        <iframe className="container h-[600px] rounded-lg overflow-hidden mt-12" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                    <div className="rounded-lg mt-8 overflow-hidden w-full h-[540px] bg-neutral-200">
+
                     </div>
                 </div>
 
@@ -43,9 +43,10 @@ export default function ForRestaurant() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-12 mt-12">
                     <section>
-                        <Image
+                        <ImageWithSkeleton
                             src="/img/for-restaurant/back-office-1.svg"
-                            alt="Back Office 1"
+                            alt="Exact BOM Management"
+                            loading="lazy"
                             width={0}
                             height={0}
                             sizes="100vw"
@@ -59,9 +60,10 @@ export default function ForRestaurant() {
                         </div>
                     </section>
                     <section>
-                        <Image
+                        <ImageWithSkeleton
                             src="/img/for-restaurant/back-office-2.svg"
-                            alt="Back Office 1"
+                            alt="Prevent Food Waste"
+                            loading="lazy"
                             width={0}
                             height={0}
                             sizes="100vw"
@@ -75,9 +77,10 @@ export default function ForRestaurant() {
                         </div>
                     </section>
                     <section>
-                        <Image
+                        <ImageWithSkeleton
                             src="/img/for-restaurant/back-office-3.svg"
-                            alt="Back Office 1"
+                            alt="Unified Kitchen Queue"
+                            loading="lazy"
                             width={0}
                             height={0}
                             sizes="100vw"
@@ -91,9 +94,10 @@ export default function ForRestaurant() {
                         </div>
                     </section>
                     <section>
-                        <Image
+                        <ImageWithSkeleton
                             src="/img/for-restaurant/back-office-4.svg"
-                            alt="Back Office 1"
+                            alt="Direct Purchasing"
+                            loading="lazy"
                             width={0}
                             height={0}
                             sizes="100vw"

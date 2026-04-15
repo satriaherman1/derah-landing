@@ -1,8 +1,8 @@
 import Accordion from "@/components/accordion";
-import { Basket, ChartLineUp, Crosshair, Desktop, Devices, Lightning, MopedFront, Question, Scales, SquaresFour, Steps, StoreFront } from "@/components/icons";
+import { Basket, ChartLineUp, Crosshair, Desktop, Devices, Lightning, MopedFront, Plugs, Question, Scales, SquaresFour, Steps, StoreFront } from "@/components/icons";
 import Navbar from "@/components/navbar";
 import Switcher from "@/components/switcher";
-import Image from "next/image";
+import ImageWithSkeleton from "@/components/image-with-skeleton";
 import CTA from "@/components/cta";
 import Footer from "@/components/footer";
 import EmailCapture from "@/components/email-capture";
@@ -51,25 +51,26 @@ export default function Home() {
             <div className="mt-20">
               <p className="font-medium text-black/60">Integrates with top delivery and payment apps.</p>
               <div className="flex flex-wrap gap-4 mt-6">
-                <Image src="/img/partnership/mayatoorah.svg" width={138} height={20} alt="" />
-                <Image src="/img/partnership/talabat.svg" width={95} height={20} alt="" />
-                <Image src="/img/partnership/deliveroo.svg" width={74} height={20} alt="" />
-                <Image src="/img/partnership/keeta.svg" width={80} height={20} alt="" />
-                <Image src="/img/partnership/tap.svg" width={52} height={20} alt="" />
-                <Image src="/img/partnership/payments.svg" width={91} height={20} alt="" />
+                <ImageWithSkeleton src="/img/partnership/mayatoorah.svg" width={138} height={20} alt="" loading="lazy" skeletonClassName="rounded" />
+                <ImageWithSkeleton src="/img/partnership/talabat.svg" width={95} height={20} alt="" loading="lazy" skeletonClassName="rounded" />
+                <ImageWithSkeleton src="/img/partnership/deliveroo.svg" width={74} height={20} alt="" loading="lazy" skeletonClassName="rounded" />
+                <ImageWithSkeleton src="/img/partnership/keeta.svg" width={80} height={20} alt="" loading="lazy" skeletonClassName="rounded" />
+                <ImageWithSkeleton src="/img/partnership/tap.svg" width={52} height={20} alt="" loading="lazy" skeletonClassName="rounded" />
+                <ImageWithSkeleton src="/img/partnership/payments.svg" width={91} height={20} alt="" loading="lazy" skeletonClassName="rounded" />
               </div>
             </div>
           </section>
 
 
           <section className="basis-full md:basis-[calc(55%-15px)]">
-            <Image
+            <ImageWithSkeleton
               src="/img/hero-section.svg"
               alt="Logo"
               width={0}
               height={0}
               sizes="100vw"
               className="w-full h-auto object-contain"
+              priority
             />
           </section>
 
@@ -97,6 +98,7 @@ export default function Home() {
 
           <Switcher
             className="mx-auto mt-4"
+
             options={[
               {
                 label: "Omnichannel Menu Management",
@@ -118,8 +120,8 @@ export default function Home() {
           // onChange={(val) => console.log(val)}
           />
 
-          <div className="rounded-lg overflow-hidden">
-            <iframe className="container h-[600px] rounded-lg overflow-hidden mt-12" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+          <div className="rounded-lg mt-8 overflow-hidden w-full h-[540px] bg-neutral-200">
+
           </div>
         </div>
         {/* end platform features */}
@@ -138,17 +140,17 @@ export default function Home() {
 
             <div className="flex flex-wrap justify-between gap-y-4 mt-9">
 
-              <Image src="/img/home/built-workflow/cloud-kitchen.svg" alt="Logo"
+              <ImageWithSkeleton src="/img/home/built-workflow/cloud-kitchen.svg" alt="Cloud Kitchen" loading="lazy"
                 width={0}
                 height={0}
                 sizes="100vw"
                 className="w-full h-auto object-contain basis-full" />
-              <Image src="/img/home/built-workflow/cafes-quick-services.svg" alt="Logo"
+              <ImageWithSkeleton src="/img/home/built-workflow/cafes-quick-services.svg" alt="Cafes & Quick Services" loading="lazy"
                 width={0}
                 height={0}
                 sizes="100vw"
                 className="w-full h-auto object-contain basis-[calc(50%-15px)]" />
-              <Image src="/img/home/built-workflow/full-service-dining.svg" alt="Logo"
+              <ImageWithSkeleton src="/img/home/built-workflow/full-service-dining.svg" alt="Full Service Dining" loading="lazy"
                 width={0}
                 height={0}
                 sizes="100vw"
@@ -207,7 +209,7 @@ export default function Home() {
                 <section className="basis-full md:basis-[calc(50%-20px)] pt-10">
                   <p className="text-[#cccccc] font-light"> Automate your daily operations and make smarter decisions without switching between different apps.</p>
 
-                  <Image src="/img/home/mark-order-ready.svg" alt="Logo"
+                  <ImageWithSkeleton src="/img/home/mark-order-ready.svg" alt="Mark Order Ready" loading="lazy"
                     width={0}
                     height={0}
                     sizes="100vw"
@@ -224,7 +226,7 @@ export default function Home() {
           <section className="container max-w-[1300px] border-b border-[#66666630] pb-9">
             <div className="bg-[#0000000A] p-10 rounded-2xl">
               <Badge className="bg-white">
-                <Steps /> Platform Features
+                <Steps /> How it works
               </Badge>
 
               <h2 className="mt-4 text-[32px] font-semibold">
@@ -235,25 +237,28 @@ export default function Home() {
               </p>
 
               <div className="mt-6 flex gap-y-4 justify-between flex-wrap">
-                <Image
+                <ImageWithSkeleton
                   src="/img/home/how-it-works/step-1.svg"
-                  alt="Logo"
+                  alt="Step 1"
+                  loading="lazy"
                   width={0}
                   height={0}
                   sizes="100vw"
                   className="w-full h-auto object-contain basis-full md:basis-[calc(33%-12px)]"
                 />
-                <Image
+                <ImageWithSkeleton
                   src="/img/home/how-it-works/step-2.svg"
-                  alt="Logo"
+                  alt="Step 2"
+                  loading="lazy"
                   width={0}
                   height={0}
                   sizes="100vw"
                   className="w-full h-auto object-contain basis-full md:basis-[calc(33%-12px)]"
                 />
-                <Image
+                <ImageWithSkeleton
                   src="/img/home/how-it-works/step-3.svg"
-                  alt="Logo"
+                  alt="Step 3"
+                  loading="lazy"
                   width={0}
                   height={0}
                   sizes="100vw"
@@ -265,6 +270,90 @@ export default function Home() {
 
 
           </section>
+
+          <div className="container max-w-[1300px] border-t border-[#66666630] mt-20 py-16">
+            <div className="">
+              <div className="flex flex-col gap-y-4">
+                <Badge >
+                  <Plugs /> Unified Ecosystem
+                </Badge>
+                <h2 className="text-3xl font-bold">The tech foundation for your restaurant.</h2>
+                <p className="text-black/60">No need to replace your current setup. Derah connects your devices, menus, and external partners into one system.</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-12 mt-12">
+                <section>
+                  <ImageWithSkeleton
+                    src="/img/home/unified-eco/unified-eco-1.svg"
+                    alt="Unified Menu Sync"
+                    loading="lazy"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-full h-auto object-contain"
+                  />
+
+                  <div className="mt-4">
+
+                    <h3 className="text-xl font-semibold ">Unified Menu Sync</h3>
+                    <p className="text-black/60 mt-4">Update your catalog once. Changes automatically reflect across your POS, webstore, and delivery apps.</p>
+                  </div>
+                </section>
+                <section>
+                  <ImageWithSkeleton
+                    src="/img/home/unified-eco/unified-eco-2.svg"
+                    alt="Bring Your Own Payments"
+                    loading="lazy"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-full h-auto object-contain"
+                  />
+
+                  <div className="mt-4">
+
+                    <h3 className="text-xl font-semibold ">Bring Your Own Payments</h3>
+                    <p className="text-black/60 mt-4">Keep your current providers. Process transactions securely using MyFatoorah, Tap, or Hesabe directly on the POS.</p>
+                  </div>
+                </section>
+                <section>
+                  <ImageWithSkeleton
+                    src="/img/home/unified-eco/unified-eco-3.svg"
+                    alt="Seamless Delivery API"
+                    loading="lazy"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-full h-auto object-contain"
+                  />
+
+                  <div className="mt-4">
+
+                    <h3 className="text-xl font-semibold ">Seamless Delivery API</h3>
+                    <p className="text-black/60 mt-4">Route external orders from Talabat, Deliveroo, and Keeta directly into your main POS without manual entry.</p>
+                  </div>
+                </section>
+                <section>
+                  <ImageWithSkeleton
+                    src="/img/home/unified-eco/unified-eco-4.svg"
+                    alt="Direct Purchasing"
+                    loading="lazy"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-full h-auto object-contain"
+                  />
+
+                  <div className="mt-4">
+
+                    <h3 className="text-xl font-semibold ">Direct Purchasing</h3>
+                    <p className="text-black/60 mt-4">Create purchase orders and manage restaurant suppliers directly from your central dashboard.</p>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+          </div>
 
 
           <section className="container mt-12">

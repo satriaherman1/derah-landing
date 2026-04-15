@@ -4,7 +4,7 @@ import EmailCapture from "@/components/email-capture";
 import Footer from "@/components/footer";
 import { ShoppingBagOpen, StoreFront } from "@/components/icons";
 import Navbar from "@/components/navbar";
-import Image from "next/image";
+import ImageWithSkeleton from "@/components/image-with-skeleton";
 
 export default function OnlineWebStore() {
     return (<>
@@ -28,9 +28,10 @@ export default function OnlineWebStore() {
 
 
                 <section className="basis-full w-full md:w-auto md:basis-[calc(50%-15px)] min-w-0">
-                    <Image
+                    <ImageWithSkeleton
                         src="/img/online-webstore/image-1.svg"
-                        alt="Logo"
+                        alt="Online Webstore Hero"
+                        priority
                         width={0}
                         height={0}
                         sizes="100vw"
@@ -70,9 +71,10 @@ export default function OnlineWebStore() {
 
                         {/* IMAGE */}
                         <div className="flex flex-col gap-y-4 order-1 md:order-2">
-                            <Image
+                            <ImageWithSkeleton
                                 src="/img/online-webstore/image-2.svg"
-                                alt="Feature 1"
+                                alt="Smart Search & Menu Filtering"
+                                loading="lazy"
                                 width={0}
                                 height={0}
                                 sizes="100vw"
@@ -87,9 +89,10 @@ export default function OnlineWebStore() {
 
                         {/* IMAGE */}
                         <div className="flex flex-col gap-y-4 order-1 md:order-1">
-                            <Image
+                            <ImageWithSkeleton
                                 src="/img/online-webstore/image-3.svg"
-                                alt="Feature 2"
+                                alt="Advanced Modifiers"
+                                loading="lazy"
                                 width={0}
                                 height={0}
                                 sizes="100vw"
@@ -124,9 +127,10 @@ export default function OnlineWebStore() {
 
                         {/* IMAGE */}
                         <div className="flex flex-col gap-y-4 order-1 md:order-2">
-                            <Image
+                            <ImageWithSkeleton
                                 src="/img/online-webstore/image-4.svg"
-                                alt="Feature 3"
+                                alt="Interactive Map Address Picker"
+                                loading="lazy"
                                 width={0}
                                 height={0}
                                 sizes="100vw"
@@ -141,9 +145,10 @@ export default function OnlineWebStore() {
 
                         {/* IMAGE */}
                         <div className="flex flex-col gap-y-4 order-1 md:order-1">
-                            <Image
+                            <ImageWithSkeleton
                                 src="/img/online-webstore/image-5.svg"
-                                alt="Feature 4"
+                                alt="Flexible Delivery & Pickup"
+                                loading="lazy"
                                 width={0}
                                 height={0}
                                 sizes="100vw"

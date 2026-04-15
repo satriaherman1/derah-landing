@@ -24,8 +24,10 @@ import Facebook from './tree-structure'
 import Linkedin from './linkedin'
 import Robot from './robot'
 import TreeStructure from './tree-structure'
+import Plugs from './plugs'
 
 export {
+
     CaretDown,
     CellTower,
     Basket,
@@ -50,6 +52,7 @@ export {
     SquaresFour,
     MopedFront,
     Crosshair,
+    Plugs,
     Lightning,
     Scales
 }

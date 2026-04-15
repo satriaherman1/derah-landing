@@ -2,7 +2,7 @@ import CTA from "@/components/cta";
 import Footer from "@/components/footer";
 import { Cloud, CreditCard, Package, ShoppingBagOpen, StoreFront } from "@/components/icons";
 import Navbar from "@/components/navbar";
-import Image from "next/image";
+import ImageWithSkeleton from "@/components/image-with-skeleton";
 import EmailCapture from "@/components/email-capture";
 import Badge from "@/components/badge";
 
@@ -28,9 +28,10 @@ export default function WebBasedPos() {
 
 
                     <section className="basis-full w-full md:w-auto md:basis-[calc(50%-15px)] min-w-0">
-                        <Image
+                        <ImageWithSkeleton
                             src="/img/web-based-pos/image-1.svg"
-                            alt="Logo"
+                            alt="Web-Based POS Hero"
+                            priority
                             width={0}
                             height={0}
                             sizes="100vw"
@@ -52,9 +53,10 @@ export default function WebBasedPos() {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-12 mt-12">
                             <section className="basis-full w-full md:w-auto md:basis-[calc(50%-15px)] min-w-0">
-                                <Image
+                                <ImageWithSkeleton
                                     src="/img/web-based-pos/omnichannel-sync-1.svg"
-                                    alt="Logo"
+                                    alt="Omnichannel Sync 1"
+                                    loading="lazy"
                                     width={0}
                                     height={0}
                                     sizes="100vw"
@@ -63,9 +65,10 @@ export default function WebBasedPos() {
                             </section>
 
                             <section className="basis-full w-full md:w-auto md:basis-[calc(50%-15px)] min-w-0">
-                                <Image
+                                <ImageWithSkeleton
                                     src="/img/web-based-pos/omnichannel-sync-2.svg"
-                                    alt="Logo"
+                                    alt="Omnichannel Sync 2"
+                                    loading="lazy"
                                     width={0}
                                     height={0}
                                     sizes="100vw"
@@ -74,9 +77,10 @@ export default function WebBasedPos() {
                             </section>
 
                             <section className="basis-full w-full md:w-auto md:basis-[calc(50%-15px)] min-w-0">
-                                <Image
+                                <ImageWithSkeleton
                                     src="/img/web-based-pos/omnichannel-sync-3.svg"
-                                    alt="Logo"
+                                    alt="Omnichannel Sync 3"
+                                    loading="lazy"
                                     width={0}
                                     height={0}
                                     sizes="100vw"
@@ -117,9 +121,10 @@ export default function WebBasedPos() {
 
                             {/* IMAGE */}
                             <div className="flex flex-col gap-y-4 order-1 md:order-2">
-                                <Image
+                                <ImageWithSkeleton
                                     src="/img/online-webstore/image-2.svg"
-                                    alt="Feature 1"
+                                    alt="Track Stock Levels"
+                                    loading="lazy"
                                     width={0}
                                     height={0}
                                     sizes="100vw"
@@ -134,9 +139,10 @@ export default function WebBasedPos() {
 
                             {/* IMAGE */}
                             <div className="flex flex-col gap-y-4 order-1 md:order-1">
-                                <Image
+                                <ImageWithSkeleton
                                     src="/img/online-webstore/image-3.svg"
-                                    alt="Feature 2"
+                                    alt="Single Order Queue"
+                                    loading="lazy"
                                     width={0}
                                     height={0}
                                     sizes="100vw"
@@ -171,9 +177,10 @@ export default function WebBasedPos() {
 
                             {/* IMAGE */}
                             <div className="flex flex-col gap-y-4 order-1 md:order-2">
-                                <Image
+                                <ImageWithSkeleton
                                     src="/img/online-webstore/image-4.svg"
-                                    alt="Feature 3"
+                                    alt="Multiple Locations"
+                                    loading="lazy"
                                     width={0}
                                     height={0}
                                     sizes="100vw"
@@ -188,9 +195,10 @@ export default function WebBasedPos() {
 
                             {/* IMAGE */}
                             <div className="flex flex-col gap-y-4 order-1 md:order-1">
-                                <Image
+                                <ImageWithSkeleton
                                     src="/img/online-webstore/image-5.svg"
-                                    alt="Feature 4"
+                                    alt="Flexible Delivery & Pickup"
+                                    loading="lazy"
                                     width={0}
                                     height={0}
                                     sizes="100vw"
@@ -227,26 +235,29 @@ export default function WebBasedPos() {
 
                         <div className="flex justify-between gap-y-6 flex-wrap mt-12">
 
-                            <Image
+                            <ImageWithSkeleton
                                 src="/img/web-based-pos/flexible-eco-1.svg"
-                                alt="Feature 5"
+                                alt="Flexible Ecosystem 1"
+                                loading="lazy"
                                 width={0}
                                 height={0}
                                 sizes="100vw"
                                 className="w-full h-auto object-contain basis-full"
                             />
 
-                            <Image
+                            <ImageWithSkeleton
                                 src="/img/web-based-pos/flexible-eco-2.svg"
-                                alt="Feature 5"
+                                alt="Flexible Ecosystem 2"
+                                loading="lazy"
                                 width={0}
                                 height={0}
                                 sizes="100vw"
                                 className="w-full h-auto object-contain basis-full md:basis-[calc(50%-15px)]"
                             />
-                            <Image
+                            <ImageWithSkeleton
                                 src="/img/web-based-pos/flexible-eco-3.svg"
-                                alt="Feature 5"
+                                alt="Flexible Ecosystem 3"
+                                loading="lazy"
                                 width={0}
                                 height={0}
                                 sizes="100vw"
