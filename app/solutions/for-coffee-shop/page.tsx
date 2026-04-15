@@ -4,7 +4,7 @@ import EmailCapture from "@/components/email-capture";
 import Footer from "@/components/footer";
 import { CellTower, Robot, ShoppingBagOpen, StoreFront, TreeStructure } from "@/components/icons";
 import Navbar from "@/components/navbar";
-import Image from "next/image";
+import ImageWithSkeleton from "@/components/image-with-skeleton";
 
 export default function ForCoffeeShop() {
     return (<>
@@ -43,9 +43,10 @@ export default function ForCoffeeShop() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-12 mt-12">
                     <section>
-                        <Image
+                        <ImageWithSkeleton
                             src="/img/for-coffee-shop/front-workflow-1.svg"
-                            alt="Back Office 1"
+                            alt="1-Click Modifiers"
+                            loading="lazy"
                             width={0}
                             height={0}
                             sizes="100vw"
@@ -59,9 +60,10 @@ export default function ForCoffeeShop() {
                         </div>
                     </section>
                     <section>
-                        <Image
+                        <ImageWithSkeleton
                             src="/img/for-coffee-shop/front-workflow-2.svg"
-                            alt="Back Office 1"
+                            alt="Rapid Checkouts"
+                            loading="lazy"
                             width={0}
                             height={0}
                             sizes="100vw"
@@ -75,9 +77,10 @@ export default function ForCoffeeShop() {
                         </div>
                     </section>
                     <section>
-                        <Image
+                        <ImageWithSkeleton
                             src="/img/for-coffee-shop/front-workflow-3.svg"
-                            alt="Back Office 1"
+                            alt="Name-Based Routing"
+                            loading="lazy"
                             width={0}
                             height={0}
                             sizes="100vw"
@@ -91,9 +94,10 @@ export default function ForCoffeeShop() {
                         </div>
                     </section>
                     <section>
-                        <Image
+                        <ImageWithSkeleton
                             src="/img/for-coffee-shop/front-workflow-4.svg"
-                            alt="Back Office 1"
+                            alt="Offline Reliability"
+                            loading="lazy"
                             width={0}
                             height={0}
                             sizes="100vw"

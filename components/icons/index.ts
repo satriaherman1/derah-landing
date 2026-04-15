@@ -25,9 +25,10 @@ import Linkedin from './linkedin'
 import Robot from './robot'
 import TreeStructure from './tree-structure'
 import Plugs from './plugs'
+import PuzzlePiece from './puzzle-piece'
 
 export {
-
+    PuzzlePiece,
     CaretDown,
     CellTower,
     Basket,

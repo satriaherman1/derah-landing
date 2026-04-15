@@ -4,7 +4,7 @@ import EmailCapture from "@/components/email-capture";
 import Footer from "@/components/footer";
 import { CellTower, ShoppingBagOpen, StoreFront } from "@/components/icons";
 import Navbar from "@/components/navbar";
-import Image from "next/image";
+import ImageWithSkeleton from "@/components/image-with-skeleton";
 
 export default function SyncEcosystem() {
     return (<>
@@ -28,14 +28,7 @@ export default function SyncEcosystem() {
 
 
                 <section className="basis-full w-full md:w-auto md:basis-[calc(50%-15px)] min-w-0">
-                    <Image
-                        src="/img/sync-ecosystem/image-1.svg"
-                        alt="Logo"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        className="w-full h-auto object-contain"
-                    />
+
                 </section>
 
             </div>
@@ -55,9 +48,10 @@ export default function SyncEcosystem() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-12 mt-12">
                     <section className="basis-full w-full md:w-auto md:basis-[calc(50%-15px)] min-w-0">
-                        <Image
+                        <ImageWithSkeleton
                             src="/img/sync-ecosystem/seamless-dist-1.svg"
-                            alt="Logo"
+                            alt="Seamless Distribution 1"
+                            loading="lazy"
                             width={0}
                             height={0}
                             sizes="100vw"
@@ -66,9 +60,10 @@ export default function SyncEcosystem() {
                     </section>
 
                     <section className="basis-full w-full md:w-auto md:basis-[calc(50%-15px)] min-w-0">
-                        <Image
+                        <ImageWithSkeleton
                             src="/img/sync-ecosystem/seamless-dist-2.svg"
-                            alt="Logo"
+                            alt="Seamless Distribution 2"
+                            loading="lazy"
                             width={0}
                             height={0}
                             sizes="100vw"
@@ -77,9 +72,10 @@ export default function SyncEcosystem() {
                     </section>
 
                     <section className="basis-full w-full md:w-auto md:basis-[calc(50%-15px)] min-w-0">
-                        <Image
+                        <ImageWithSkeleton
                             src="/img/sync-ecosystem/seamless-dist-3.svg"
-                            alt="Logo"
+                            alt="Seamless Distribution 3"
+                            loading="lazy"
                             width={0}
                             height={0}
                             sizes="100vw"

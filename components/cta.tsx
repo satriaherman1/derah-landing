@@ -6,7 +6,9 @@ const CTA = () => {
         <div
             className="w-full relative overflow-hidden py-24 mt-20 px-3 md:px-0"
             style={{
-                background: 'linear-gradient(90deg, #FF6947 0%, #E94E38 100%)',
+                backgroundImage: `url('/img/cta-bg.svg')`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover'
             }}
         >
             {/* Background Star & Plus Details */}
@@ -44,9 +46,9 @@ const CTA = () => {
                         F&B industry. Set up in minutes.
                     </p>
 
-                    <EmailCapture 
-                        className="border-transparent" 
-                        buttonClassName="bg-primary border-none hover:bg-[#D64431] text-white" 
+                    <EmailCapture
+                        className="border-transparent"
+                        buttonClassName="bg-primary border-none hover:bg-[#D64431] text-white"
                     />
                 </div>
             </div>

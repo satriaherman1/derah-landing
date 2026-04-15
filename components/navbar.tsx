@@ -164,8 +164,8 @@ export default function Navbar() {
                             </button>
                             <NavDropdown className="min-w-4xl" label="Solutions" items={solutionsItems} open={openSolutions} />
                         </div>
-                        <button>Integrations</button>
-                        <button>Pricing</button>
+                        <Link href="/integrations">Integrations</Link>
+                        <Link href="/pricing">Pricing</Link>
                     </section>
 
                     {/* CTA DESKTOP */}
