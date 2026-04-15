@@ -22,8 +22,8 @@ export default function ForCoffeeShop() {
 
                     <EmailCapture className="mx-auto" />
 
-                    <div className="rounded-lg overflow-hidden">
-                        <iframe className="container h-[600px] rounded-lg overflow-hidden mt-12" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                    <div className="rounded-lg mt-8 overflow-hidden w-full h-[540px] bg-neutral-200">
+
                     </div>
                 </div>
 
