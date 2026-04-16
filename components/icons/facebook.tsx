@@ -7,8 +7,6 @@ const Icons = ({ width = 28, height = 28, color = "#868C98", className }: IconPr
     </svg>
 
 
-
-
 )
 
 export default Icons

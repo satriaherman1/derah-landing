@@ -20,14 +20,16 @@ import Package from './package'
 import CreditCard from './credit-card'
 import CellTower from './cell-tower'
 import Instagram from './instagram'
-import Facebook from './tree-structure'
+import Facebook from './facebook'
 import Linkedin from './linkedin'
 import Robot from './robot'
 import TreeStructure from './tree-structure'
 import Plugs from './plugs'
 import PuzzlePiece from './puzzle-piece'
+import TagChevron from './tag-chevron'
 
 export {
+    TagChevron,
     PuzzlePiece,
     CaretDown,
     CellTower,

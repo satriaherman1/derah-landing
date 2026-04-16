@@ -20,8 +20,8 @@ export default function Footer() {
                         </p>
                         <div className="flex items-center gap-x-4 mt-4 h-6">
                             {/* Media icons requested to be blank */}
-                            <Link href="#"><Facebook /></Link>
                             <Link href="#"><Instagram /></Link>
+                            <Link href="#"><Facebook /></Link>
                             <Link href="#"><Linkedin /></Link>
                             <Link href="#"><TwitterX /></Link>
                         </div>

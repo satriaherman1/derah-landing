@@ -6,7 +6,7 @@ const CTA = () => {
         <div
             className="w-full relative overflow-hidden py-24 mt-20 px-3 md:px-0"
             style={{
-                backgroundImage: `url('/img/cta-bg.svg')`,
+                backgroundImage: `linear-gradient(to top,#EF523760, #EF5237)`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover'
             }}

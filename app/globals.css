@@ -23,11 +23,30 @@ body {
 
   }
 
+  .btn-md {
+    @apply px-6 py-3 rounded-lg;
+
+  }
+
   .btn-primary {
     @apply bg-primary text-white hover:bg-primary-hover;
     box-shadow: 0px -2px 0px 0px #E93111 inset;
 
   }
+
+  .btn-gray {
+    @apply bg-[#E5E5E5] text-black hover:bg-[#dcdcdc];
+    box-shadow: 0px -2px 0px 0px #0000001A inset;
+
+  }
+
+  .btn-dark {
+    @apply bg-[#333333] text-white hover:bg-[#2a2a2a];
+    box-shadow: 0px -2px 0px 0px #0000001A inset;
+
+  }
+
+
 
 
 
