@@ -2,7 +2,7 @@ import Badge from "@/components/badge";
 import CTA from "@/components/cta";
 import EmailCapture from "@/components/email-capture";
 import Footer from "@/components/footer";
-import { CellTower, PuzzlePiece, ShoppingBagOpen, SquaresFour, StoreFront } from "@/components/icons";
+import { CellTower, CreditCard, Moped, PuzzlePiece, ShoppingBagOpen, SquaresFour, StoreFront } from "@/components/icons";
 import Navbar from "@/components/navbar";
 import ImageWithSkeleton from "@/components/image-with-skeleton";
 import SearchBox from "@/components/search-box";
@@ -45,7 +45,7 @@ export default function Integrations() {
         },
         {
             key: "delivery",
-            icon: <StoreFront width={20} height={20} color="currentColor" />,
+            icon: <Moped width={20} height={20} color="currentColor" />,
             title: "Delivery & Logistics",
             description: "Automate your last-mile delivery workflows.",
             items: [
@@ -58,7 +58,7 @@ export default function Integrations() {
         },
         {
             key: "payment",
-            icon: <StoreFront width={20} height={20} color="currentColor" />,
+            icon: <CreditCard width={20} height={20} color="currentColor" />,
             title: "Payment Gateways",
             description: "Process online payments securely.",
             items: [

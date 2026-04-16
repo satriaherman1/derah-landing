@@ -46,7 +46,7 @@ export default function IntegrationLayout({
                                 : "bg-gray-100 text-[#666666]"}
                         `}
                     >
-                        <span className="w-5 h-5 rounded bg-gray-200 flex items-center justify-center text-[10px]">
+                        <span className="w-5 h-5 rounded md:bg-gray-200 flex items-center justify-center text-[10px]">
                             {allIcon ?? "●"}
                         </span>
                         All
@@ -63,7 +63,7 @@ export default function IntegrationLayout({
                                     : "bg-gray-100 text-[#666666]"}
                             `}
                         >
-                            <span className="w-5 h-5 rounded bg-gray-200 flex items-center justify-center text-[10px]">
+                            <span className="w-5 h-5 rounded md:bg-gray-200 flex items-center justify-center text-[10px]">
                                 {section.icon ?? "■"}
                             </span>
                             {section.title}

@@ -27,6 +27,7 @@ import TreeStructure from './tree-structure'
 import Plugs from './plugs'
 import PuzzlePiece from './puzzle-piece'
 import TagChevron from './tag-chevron'
+import Moped from './moped'
 
 export {
     TagChevron,
@@ -39,6 +40,7 @@ export {
     Facebook,
     Cloud,
     Robot,
+    Moped,
     Linkedin,
     TwitterX,
     CreditCard,
