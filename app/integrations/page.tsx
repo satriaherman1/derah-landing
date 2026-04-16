@@ -89,7 +89,7 @@ export default function Integrations() {
 
         <Navbar />
         <main className="mt-6 md:mt-16">
-            <div className="flex gap-y-12 flex-wrap flex-col-reverse md:flex-row md:items-end justify-between gap-x-4 container max-w-[1300px]">
+            <div className="flex gap-y-12 flex-wrap flex-col md:flex-row md:items-end justify-between gap-x-4 container max-w-[1300px]">
                 <section className="basis-full w-full md:w-auto md:basis-[calc(50%-15px)] min-w-0">
                     <Badge>
                         <PuzzlePiece /> Connect Your Tools
