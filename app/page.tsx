@@ -7,6 +7,7 @@ import CTA from "@/components/cta";
 import Footer from "@/components/footer";
 import EmailCapture from "@/components/email-capture";
 import Badge from "@/components/badge";
+import KeyAdvantages from "@/components/fragments/key-advantages";
 
 export default function Home() {
 
@@ -138,86 +139,36 @@ export default function Home() {
 
             <p className="mt-3 text-[#cccccc] font-light">Whether you run a fast-paced cafe or a delivery-only kitchen, Derah adapts to your <br /> exact business model.</p>
 
-            <div className="flex flex-wrap justify-between gap-y-4 mt-9">
+            <div className="flex flex-wrap justify-between gap-y-4 mt-9 w-full">
 
               <ImageWithSkeleton src="/img/home/built-workflow/cloud-kitchen.svg" alt="Cloud Kitchen" loading="lazy"
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-full h-auto object-contain basis-full" />
+                className="w-full h-auto object-contain basis-full"
+                containerClassName="w-full"
+              />
               <ImageWithSkeleton src="/img/home/built-workflow/cafes-quick-services.svg" alt="Cafes & Quick Services" loading="lazy"
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-full h-auto object-contain basis-[calc(50%-15px)]" />
+                className="w-full h-auto object-contain"
+                containerClassName="basis-full md:basis-[calc(50%-15px)]"
+              />
               <ImageWithSkeleton src="/img/home/built-workflow/full-service-dining.svg" alt="Full Service Dining" loading="lazy"
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-full h-auto object-contain basis-[calc(50%-15px)]" />
+                className="w-full h-auto object-contain"
+                containerClassName="basis-full md:basis-[calc(50%-15px)]"
+              />
 
 
             </div>
 
 
-            <section className="mt-28">
-              <Badge className="bg-[#FFFFFF1A] text-white">
-                <Lightning /> Key Advantages
-              </Badge>
-
-              <div className="flex flex-wrap justify-between">
-                <section className="basis-full md:basis-[calc(50%-20px)]">
-                  <h2 className="text-4xl font-medium text-white">
-                    Everything you need to run a
-                    high-margin restaurant.
-                  </h2>
-
-                  <div className="flex gap-x-3 mt-7 border-b border-[#ffffff37] py-5">
-                    <div className="w-fit h-fit p-1 rounded-md bg-primary shadow-[inset_0px_-2px_0px_0px_#FFFFFF1A]">
-                      <SquaresFour width={20} height={20} />
-                    </div>
-
-                    <div>
-                      <span className="text-white">Connect front and back of house.</span>
-                      <p className="text-[#999999] font-light text-sm mt-2">Eliminate paper tickets and lost orders. Send tickets straight to the Kitchen Display System (KDS) for faster prep times.</p>
-
-
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-x-3 border-b border-[#ffffff37] py-5">
-                    <div className="w-fit h-fit p-1 rounded-md bg-[#FFFFFF29] shadow-[inset_0px_-2px_0px_0px_#FFFFFF1A]">
-                      <Scales width={20} height={20} />
-                    </div>
-
-                    <div>
-                      <span className="text-white">Know your stock levels down to the last gram.</span>
-
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-x-3 border-b border-[#ffffff37] py-5">
-                    <div className="w-fit h-fit p-1 rounded-md bg-[#FFFFFF29] shadow-[inset_0px_-2px_0px_0px_#FFFFFF1A]">
-                      <ChartLineUp width={20} height={20} />
-                    </div>
-
-                    <div>
-                      <span className="text-white">Data-driven decisions.</span>
-
-                    </div>
-                  </div>
-                </section>
-
-                <section className="basis-full md:basis-[calc(50%-20px)] pt-10">
-                  <p className="text-[#cccccc] font-light"> Automate your daily operations and make smarter decisions without switching between different apps.</p>
-
-                  <ImageWithSkeleton src="/img/home/mark-order-ready.svg" alt="Mark Order Ready" loading="lazy"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="w-full h-auto object-contain basis-full mt-6" />
-                </section>
-              </div>
-            </section>
-
+            {/* key advantages */}
+            <KeyAdvantages className="mt-28" />
           </section>
         </div>
 

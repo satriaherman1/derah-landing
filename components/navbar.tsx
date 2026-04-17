@@ -125,19 +125,20 @@ export default function Navbar() {
             />
 
             {/* ================= NAVBAR ================= */}
-            <nav className="py-4 px-3 relative z-40 border-b border-[#66666630] bg-white">
+            <nav className="py-4 px-3 sticky top-0 z-40 border-b border-[#66666630] bg-white w-full">
                 <div className="container max-w-[1300px] mx-auto flex justify-between items-center">
 
                     {/* LOGO */}
-                    <Image
-                        src="/img/logo.svg"
-                        alt="Logo"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        className="w-[120px] md:w-[140px] h-auto object-contain"
-                    />
-
+                    <Link href="/">
+                        <Image
+                            src="/img/logo.svg"
+                            alt="Logo"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            className="w-[120px] md:w-[140px] h-auto object-contain"
+                        />
+                    </Link>
                     {/* DESKTOP MENU */}
                     <section className="hidden md:flex items-center gap-x-6">
 
@@ -207,14 +208,16 @@ export default function Navbar() {
             >
                 {/* HEADER */}
                 <div className="flex items-center justify-between px-6 py-4 border-b border-[#66666630]">
-                    <Image
-                        src="/img/logo.svg"
-                        alt="Logo"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        className="w-[110px] h-auto"
-                    />
+                    <Link href="/">
+                        <Image
+                            src="/img/logo.svg"
+                            alt="Logo"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            className="w-[110px] h-auto"
+                        />
+                    </Link>
                     <button
                         onClick={() => setMobileOpen(false)}
                         className="text-xl"

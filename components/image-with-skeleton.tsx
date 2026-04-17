@@ -1,22 +1,25 @@
 'use client';
 
+import clsx from 'clsx';
 import Image, { ImageProps } from 'next/image';
 import { useState } from 'react';
 
 type ImageWithSkeletonProps = ImageProps & {
   skeletonClassName?: string;
+  containerClassName?: string;
 };
 
 export default function ImageWithSkeleton({
   className,
   skeletonClassName,
+  containerClassName,
   onLoad,
   ...props
 }: ImageWithSkeletonProps) {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <span className="relative block overflow-hidden">
+    <span className={clsx(`relative block overflow-hidden`, containerClassName)}>
       {/* Skeleton shimmer */}
       {!loaded && (
         <span
