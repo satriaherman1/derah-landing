@@ -1,3 +1,5 @@
+"use client"
+
 import Accordion from "@/components/accordion";
 import { Basket, ChartLineUp, Crosshair, Desktop, Devices, Lightning, MopedFront, Plugs, Question, Scales, SquaresFour, Steps, StoreFront } from "@/components/icons";
 import Navbar from "@/components/navbar";
@@ -8,8 +10,11 @@ import Footer from "@/components/footer";
 import EmailCapture from "@/components/email-capture";
 import Badge from "@/components/badge";
 import KeyAdvantages from "@/components/fragments/key-advantages";
+import { useState } from "react";
 
 export default function Home() {
+
+  const [bannerUrl, setBannerUrl] = useState<string>("/img/home/banner-1.svg")
 
 
   const faqData = [
@@ -155,33 +160,33 @@ export default function Home() {
             options={[
               {
                 label: "Omnichannel Menu Management",
-                value: "Omnichannel Menu Management",
+                value: "/img/home/banner-1.svg",
                 icon: <SquaresFour color="currentColor" />,
               },
               {
                 label: "Seamless Checkout & Delivery",
-                value: "Seamless Checkout & Delivery",
+                value: "/img/home/banner-2.svg",
                 icon: <MopedFront />,
               },
               {
                 label: "Hardware-Agnostic Operations",
-                value: "Hardware-Agnostic Operations",
+                value: "/img/home/banner-3.svg",
                 icon: <Devices color="currentColor" />,
               },
             ]}
-            defaultValue="Omnichannel Menu Management"
-          // onChange={(val) => console.log(val)}
+            defaultValue="/img/home/banner-1.svg"
+            onChange={(val) => setBannerUrl(val)}
           />
 
-          <div className="rounded-lg mt-8 overflow-hidden w-full h-[700px] ">
+          <div className="rounded-lg mt-8 overflow-hidden w-full ">
             <ImageWithSkeleton
-              src="/img/home/banner.svg"
+              src={bannerUrl}
               alt="Logo"
               width={0}
               height={0}
               sizes="100vw"
               className="w-full h-auto object-contain"
-              priority
+              loading="lazy"
             />
           </div>
         </div>
@@ -234,7 +239,7 @@ export default function Home() {
 
 
         <div className="mt-20">
-          <section className="container max-w-[1300px] border-b border-[#66666630] pb-9">
+          <section className="container max-w-[1300px] border-b border-[#66666630] pb-14">
             <div className="bg-[#0000000A] p-10 rounded-2xl">
               <Badge className="bg-white">
                 <Steps /> How it works
@@ -285,7 +290,7 @@ export default function Home() {
 
           </section>
 
-          <div className="container max-w-[1300px] border-t border-[#66666630] mt-20 py-16">
+          <div className="container max-w-[1300px] border-b border-[#66666630] py-16">
             <div className="">
               <div className="flex flex-col gap-y-4">
                 <Badge >

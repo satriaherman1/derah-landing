@@ -22,7 +22,7 @@ export default function ForCoffeeShop() {
 
                     <EmailCapture className="mx-auto" />
 
-                    <div className="rounded-lg mt-8 overflow-hidden w-full h-[700px] ">
+                    <div className="rounded-lg mt-8 overflow-hidden w-full ">
                         <ImageWithSkeleton
                             src="/img/for-coffee-shop/banner.svg"
                             alt="Logo"
