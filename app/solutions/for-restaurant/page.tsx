@@ -22,8 +22,16 @@ export default function ForRestaurant() {
 
                     <EmailCapture className="mx-auto" />
 
-                    <div className="rounded-lg mt-8 overflow-hidden w-full h-[540px] bg-neutral-200">
-
+                    <div className="rounded-lg mt-8 overflow-hidden w-full h-[700px] ">
+                        <ImageWithSkeleton
+                            src="/img/for-restaurant/banner.svg"
+                            alt="Logo"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            className="w-full h-auto object-contain"
+                            priority
+                        />
                     </div>
                 </div>
 

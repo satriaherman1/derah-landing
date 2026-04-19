@@ -15,7 +15,7 @@ export default function Footer() {
                 <div className="flex flex-col lg:flex-row justify-between mb-24 lg:mb-32">
 
                     <div className="lg:w-1/3 mb-12 lg:mb-0">
-                        <ImageWithSkeleton src="/img/logo.svg" alt="Derah Logo" width={120} height={36} className="mb-6" loading="lazy" />
+                        <ImageWithSkeleton src="/img/logo.svg" alt="Derah Logo" width={150} height={45} className="mb-6" loading="lazy" />
                         <p className="text-[#666666] text-sm leading-relaxed max-w-xs">
                             The all-in-one web-based POS and omnichannel platform built strictly for modern F&B businesses.
                         </p>
