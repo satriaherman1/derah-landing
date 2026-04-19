@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { HTMLAttributes, useState } from "react";
 import {
     CaretDown,
     Devices,
@@ -18,19 +18,27 @@ type NavItem = {
     href: string;
 };
 
-function NavDropdown({ label, items, open, className }: { label: string; items: NavItem[]; open: boolean, className?: string }) {
+type NavDropdownProps = {
+    label: string;
+    items: NavItem[];
+    open: boolean;
+    className?: string;
+} & HTMLAttributes<HTMLDivElement>;
+
+function NavDropdown({ label, items, open, className, ...rest }: NavDropdownProps) {
     return (
         <div
+            {...rest}
             className={`
                 fixed left-1/2 -translate-x-1/2 top-[65px]
                 w-fit max-w-[1100px]
-                z-[60]
+                z-[9999] isolate
                 transition-all duration-200
                 ${open ? "opacity-100 translate-y-0 visible" : "opacity-0 translate-y-2 invisible"}
                 ${className}
             `}
         >
-            <div className="bg-white rounded-2xl shadow-xl p-6">
+            <div className="bg-white rounded-2xl shadow-xl p-6 relative z-100">
                 <p className="text-sm text-[#666666] mb-4 font-medium">{label}</p>
 
                 <div className={`flex  gap-3`}>
@@ -118,14 +126,14 @@ export default function Navbar() {
             {/* ================= DESKTOP OVERLAY ================= */}
             <div
                 className={`
-                    fixed inset-0 bg-black/40 backdrop-blur-sm
-                    transition-opacity duration-300 z-30 hidden md:block pointer-events-none
+                    fixed inset-0 bg-gradient-to-b from-black/5 to-black/20
+                    transition-opacity duration-300 z-40 hidden md:block pointer-events-none
                     ${anyOpen ? "opacity-100 visible" : "opacity-0 invisible"}
                 `}
             />
 
             {/* ================= NAVBAR ================= */}
-            <nav className="py-4 px-3 sticky top-0 z-40 border-b border-[#66666630] bg-white w-full">
+            <nav className="py-4 px-3 sticky top-0 z-30 border-b border-[#66666630] bg-white w-full">
                 <div className="container max-w-[1300px] mx-auto flex justify-between items-center">
 
                     {/* LOGO */}
@@ -151,7 +159,6 @@ export default function Navbar() {
                             <button className="flex items-center gap-x-2 font-medium">
                                 Product <CaretDown />
                             </button>
-                            <NavDropdown className="min-w-6xl" label="Product" items={productItems} open={openProduct} />
                         </div>
 
                         {/* SOLUTIONS */}
@@ -163,7 +170,6 @@ export default function Navbar() {
                             <button className="flex items-center gap-x-2 font-medium">
                                 Solutions <CaretDown />
                             </button>
-                            <NavDropdown className="min-w-4xl" label="Solutions" items={solutionsItems} open={openSolutions} />
                         </div>
                         <Link href="/integrations">Integrations</Link>
                         <Link href="/pricing">Pricing</Link>
@@ -186,6 +192,10 @@ export default function Navbar() {
                     </button>
                 </div>
             </nav>
+
+            <NavDropdown onMouseEnter={() => setOpenProduct(true)} onMouseLeave={() => setOpenProduct(false)} className="min-w-6xl" label="Product" items={productItems} open={openProduct} />
+            <NavDropdown onMouseEnter={() => setOpenSolutions(true)} onMouseLeave={() => setOpenSolutions(false)} className="min-w-4xl" label="Solutions" items={solutionsItems} open={openSolutions} />
+
 
             {/* ================= OVERLAY (MOBILE ONLY) ================= */}
             <div

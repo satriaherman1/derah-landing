@@ -6,7 +6,7 @@ const CTA = () => {
         <div
             className="w-full relative overflow-hidden py-24 mt-20 px-3 md:px-0"
             style={{
-                backgroundImage: `linear-gradient(to top,#EF523760, #EF5237)`,
+                backgroundImage: `url('/img/cta-bg.svg')`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover'
             }}
@@ -39,7 +39,7 @@ const CTA = () => {
                     </h2>
                 </div>
 
-                <div className="md:w-1/2 md:pl-8 lg:pl-16">
+                <div className="w-fit flex flex-col justify-end">
                     <p className="text-white/90 text-sm md:text-base leading-relaxed font-light">
                         Ditch the fragmented tools and hidden fees. Experience <br className="hidden lg:block" />
                         the most powerful web-based POS built strictly for the <br className="hidden lg:block" />

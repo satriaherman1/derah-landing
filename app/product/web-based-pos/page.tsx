@@ -233,7 +233,7 @@ export default function WebBasedPos() {
                             <p className="text-black/60">No vendor lock-in. Plug your preferred payment processors and delivery logistics directly into your dashboard for a seamless operational flow.</p>
                         </div>
 
-                        <div className="flex justify-between gap-y-6 flex-wrap mt-12">
+                        <div className="flex justify-between gap-y-4 flex-wrap mt-12">
 
                             <ImageWithSkeleton
                                 src="/img/web-based-pos/flexible-eco-1.svg"
@@ -242,7 +242,8 @@ export default function WebBasedPos() {
                                 width={0}
                                 height={0}
                                 sizes="100vw"
-                                className="w-full h-auto object-contain basis-full"
+                                className="w-full h-auto object-contain "
+                                containerClassName="basis-full"
                             />
 
                             <ImageWithSkeleton
@@ -252,7 +253,8 @@ export default function WebBasedPos() {
                                 width={0}
                                 height={0}
                                 sizes="100vw"
-                                className="w-full h-auto object-contain basis-full md:basis-[calc(50%-15px)]"
+                                className="w-full h-auto object-contain"
+                                containerClassName="basis-full md:basis-[calc(50%-15px)]"
                             />
                             <ImageWithSkeleton
                                 src="/img/web-based-pos/flexible-eco-3.svg"
@@ -261,7 +263,8 @@ export default function WebBasedPos() {
                                 width={0}
                                 height={0}
                                 sizes="100vw"
-                                className="w-full h-auto object-contain basis-full md:basis-[calc(50%-15px)]"
+                                className="w-full h-auto object-contain"
+                                containerClassName="basis-full md:basis-[calc(50%-15px)]"
                             />
                         </div>
                     </div>

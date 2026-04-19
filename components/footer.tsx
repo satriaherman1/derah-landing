@@ -7,7 +7,8 @@ export default function Footer() {
         <footer className="relative pt-24 pb-8 bg-white border-t border-[#66666630]">
             {/* Massive DERAH Background Text */}
             <div className="absolute inset-x-0 bottom-0 pointer-events-none z-0 overflow-hidden select-none flex justify-center items-end h-[300px]">
-                <ImageWithSkeleton src="/img/derah-wording.svg" alt="Derah Background" width={1200} height={360} className="mb-6" loading="lazy" />
+                <ImageWithSkeleton src="/img/derah-wording.svg" alt="Derah Background" width={1200} height={360} className="-mb-12" loading="lazy" />
+                <div className='w-full h-2 md:h-32 bg-gradient-to-b from-white/0 to-white absolute bottom-0'></div>
             </div>
 
             <div className="container max-w-[1300px] mx-auto px-4 lg:px-0 relative z-10">

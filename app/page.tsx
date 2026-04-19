@@ -35,46 +35,98 @@ export default function Home() {
     <>
       <Navbar />
       <main className="mt-16">
-        <div className="flex flex-wrap flex-col-reverse md:flex-row justify-between gap-x-4 container max-w-[1300px]">
-          <section className="basis-full md:basis-[calc(40%-15px)]">
-            <Badge>
-              <StoreFront /> All-In-One POS Software
-            </Badge>
-
-            <h1 className="text-4xl font-bold">Run Your Entire Restaurant <br />
-              From Any Device.
-            </h1>
-            <p className="text-black/60 mt-5">Manage in-store, online, and delivery apps (Talabat, Deliveroo, Keeta) from one web-based POS. No expensive hardware required.</p>
-
-            <EmailCapture />
+        <div className="relative ">
+          <div className="flex flex-col-reverse md:flex-row items-center justify-between max-w-[1300px] mx-auto px-4">
 
 
-            <div className="mt-20">
-              <p className="font-medium text-black/60">Integrates with top delivery and payment apps.</p>
-              <div className="flex flex-wrap gap-4 mt-6">
-                <ImageWithSkeleton src="/img/partnership/mayatoorah.svg" width={138} height={20} alt="" loading="lazy" skeletonClassName="rounded" />
-                <ImageWithSkeleton src="/img/partnership/talabat.svg" width={95} height={20} alt="" loading="lazy" skeletonClassName="rounded" />
-                <ImageWithSkeleton src="/img/partnership/deliveroo.svg" width={74} height={20} alt="" loading="lazy" skeletonClassName="rounded" />
-                <ImageWithSkeleton src="/img/partnership/keeta.svg" width={80} height={20} alt="" loading="lazy" skeletonClassName="rounded" />
-                <ImageWithSkeleton src="/img/partnership/tap.svg" width={52} height={20} alt="" loading="lazy" skeletonClassName="rounded" />
-                <ImageWithSkeleton src="/img/partnership/payments.svg" width={91} height={20} alt="" loading="lazy" skeletonClassName="rounded" />
+            <section className="w-full md:w-[480px] shrink-0">
+              <Badge>
+                <StoreFront /> All-In-One POS Software
+              </Badge>
+
+              <h1 className="text-4xl font-bold leading-tight mt-4">
+                Run Your Entire Restaurant <br />
+                From Any Device.
+              </h1>
+
+              <p className="text-black/60 mt-5">
+                Manage in-store, online, and delivery apps (Talabat, Deliveroo, Keeta)
+                from one web-based POS. No expensive hardware required.
+              </p>
+
+              <div className="mt-6">
+                <EmailCapture />
               </div>
-            </div>
-          </section>
 
+              {/* PARTNERS */}
+              <div className="mt-16 md:mt-48">
+                <p className="font-medium text-black/60">
+                  Integrates with top delivery and payment apps.
+                </p>
 
-          <section className="basis-full md:basis-[calc(55%-15px)]">
-            <ImageWithSkeleton
-              src="/img/hero-section.svg"
-              alt="Logo"
-              width={0}
-              height={0}
-              sizes="100vw"
-              className="w-full h-auto object-contain"
-              priority
-            />
-          </section>
+                <div className="flex flex-wrap md:flex-nowrap gap-6 mt-6 relative z-20">
+                  <ImageWithSkeleton
+                    src="/img/partnership/mayatoorah.svg"
+                    width={138}
+                    height={20}
+                    alt=""
+                    containerClassName="flex-shrink-0"
+                  />
+                  <ImageWithSkeleton
+                    src="/img/partnership/talabat.svg"
+                    width={95}
+                    height={20}
+                    alt=""
+                    containerClassName="flex-shrink-0"
+                  />
+                  <ImageWithSkeleton
+                    src="/img/partnership/deliveroo.svg"
+                    width={74}
+                    height={20}
+                    alt=""
+                    containerClassName="flex-shrink-0"
+                  />
+                  <ImageWithSkeleton
+                    src="/img/partnership/keeta.svg"
+                    width={80}
+                    height={20}
+                    alt=""
+                    containerClassName="flex-shrink-0"
+                  />
+                  <ImageWithSkeleton
+                    src="/img/partnership/tap.svg"
+                    width={52}
+                    height={20}
+                    alt=""
+                    containerClassName="flex-shrink-0"
+                  />
+                  <ImageWithSkeleton
+                    src="/img/partnership/payments.svg"
+                    width={91}
+                    height={20}
+                    alt=""
+                    containerClassName="flex-shrink-0"
+                  />
+                </div>
+              </div>
+            </section>
 
+            {/* RIGHT */}
+            <section className="w-full md:flex-1 relative">
+              <div className="w-full md:w-[140%] md:-ml-32 md:-mr-32 md:absolute md:top-1/2 md:-translate-y-[60%]">
+                <ImageWithSkeleton
+                  src="/img/hero-section.svg"
+                  alt="Hero Illustration"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="w-[87%] h-[80%] object-contain"
+                  priority
+                />
+              </div>
+            </section>
+
+          </div>
         </div>
 
         <div className="container max-w-[1300px] border-t my-12 border-[#66666630]"></div>
@@ -117,12 +169,20 @@ export default function Home() {
                 icon: <Devices color="currentColor" />,
               },
             ]}
-            defaultValue="pos"
+            defaultValue="Omnichannel Menu Management"
           // onChange={(val) => console.log(val)}
           />
 
-          <div className="rounded-lg mt-8 overflow-hidden w-full h-[540px] bg-neutral-200">
-
+          <div className="rounded-lg mt-8 overflow-hidden w-full h-[700px] ">
+            <ImageWithSkeleton
+              src="/img/home/banner.svg"
+              alt="Logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full h-auto object-contain"
+              priority
+            />
           </div>
         </div>
         {/* end platform features */}
@@ -139,7 +199,7 @@ export default function Home() {
 
             <p className="mt-3 text-[#cccccc] font-light">Whether you run a fast-paced cafe or a delivery-only kitchen, Derah adapts to your <br /> exact business model.</p>
 
-            <div className="flex flex-wrap justify-between gap-y-4 mt-9 w-full">
+            <div className="flex flex-wrap justify-between gap-y-5 mt-9 w-full">
 
               <ImageWithSkeleton src="/img/home/built-workflow/cloud-kitchen.svg" alt="Cloud Kitchen" loading="lazy"
                 width={0}
@@ -153,14 +213,14 @@ export default function Home() {
                 height={0}
                 sizes="100vw"
                 className="w-full h-auto object-contain"
-                containerClassName="basis-full md:basis-[calc(50%-15px)]"
+                containerClassName="basis-full md:basis-[calc(50%-10px)]"
               />
               <ImageWithSkeleton src="/img/home/built-workflow/full-service-dining.svg" alt="Full Service Dining" loading="lazy"
                 width={0}
                 height={0}
                 sizes="100vw"
                 className="w-full h-auto object-contain"
-                containerClassName="basis-full md:basis-[calc(50%-15px)]"
+                containerClassName="basis-full md:basis-[calc(50%-10px)]"
               />
 
 
@@ -195,7 +255,8 @@ export default function Home() {
                   width={0}
                   height={0}
                   sizes="100vw"
-                  className="w-full h-auto object-contain basis-full md:basis-[calc(33%-12px)]"
+                  className="w-full h-auto object-contain"
+                  containerClassName="basis-full md:basis-[calc(33%-12px)]"
                 />
                 <ImageWithSkeleton
                   src="/img/home/how-it-works/step-2.svg"
@@ -204,7 +265,8 @@ export default function Home() {
                   width={0}
                   height={0}
                   sizes="100vw"
-                  className="w-full h-auto object-contain basis-full md:basis-[calc(33%-12px)]"
+                  className="w-full h-auto object-contain"
+                  containerClassName="basis-full md:basis-[calc(33%-12px)]"
                 />
                 <ImageWithSkeleton
                   src="/img/home/how-it-works/step-3.svg"
@@ -213,7 +275,8 @@ export default function Home() {
                   width={0}
                   height={0}
                   sizes="100vw"
-                  className="w-full h-auto object-contain basis-full md:basis-[calc(33%-12px)]"
+                  className="w-full h-auto object-contain"
+                  containerClassName="basis-full md:basis-[calc(33%-12px)]"
                 />
               </div>
             </div>
