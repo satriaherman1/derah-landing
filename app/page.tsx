@@ -180,13 +180,16 @@ export default function Home() {
 
           <div className="rounded-lg mt-8 overflow-hidden w-full ">
             <ImageWithSkeleton
-              src={bannerUrl}
+              key={bannerUrl}
+              src={`${bannerUrl}?v=${Date.now()}`}
               alt="Logo"
               width={0}
               height={0}
               sizes="100vw"
               className="w-full h-auto object-contain"
-              loading="lazy"
+              containerClassName="min-h-[400px] md:min-h-[700px]"
+              onLoad={() => console.log('onLoad fired', bannerUrl)}
+              priority
             />
           </div>
         </div>
